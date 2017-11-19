@@ -15,6 +15,7 @@
 	border: 2px solid #000;
 	font-size: 18px;
 	color: #DB7093;
+	border-radius: 0;
 }
 .todoListMain button{
 	padding: 3px 10px;

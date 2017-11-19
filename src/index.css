@@ -11,6 +11,12 @@ body {
 	/*align-items: center;*/
 }
 h1{
+	font-size: 28px;
 	color: #fff;
+	text-align: center;
+}
+h2{
+	font-size: 14px;
+	font-weight: 300;
 	text-align: center;
 }

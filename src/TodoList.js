@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import TodoItems from './TodoItems';
+import TodoItems from './TodoItems'
+
 import './TodoList.css';
 
 class TodoList extends React.Component {
@@ -11,6 +12,8 @@ class TodoList extends React.Component {
 		};
 		this.addItem = this.addItem.bind(this);
 		this.deleteItem = this.deleteItem.bind(this);
+
+
 	}
 
 	addItem(e){
@@ -57,7 +60,7 @@ class TodoList extends React.Component {
 
 						placeholder="enter task">
 						</input>
-						<button type="submit">Add</button>
+							<button type="submit">Add</button>
 					</form>
 				</div>
 				<TodoItems entries = {this.state.items} 
