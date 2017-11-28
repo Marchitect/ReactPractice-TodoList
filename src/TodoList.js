@@ -1,19 +1,29 @@
-import React, {Component} from 'react';
-import TodoItems from './TodoItems'
+import React from 'react';
+import TodoItems from './TodoItems';
+
+import RenderSubmitButton from './RenderSubmitButton';
+
+import {MainAppDescription} from './MainAppDescription';
+import {LanguagePropsControl} from './LanguagePropsControl';
 
 import './TodoList.css';
 
 class TodoList extends React.Component {
-	constructor(props, context){
-		super(props, context);
+	constructor(props){
+		super(props);
 
 		this.state = {
-			items: []
+			items: [], lang: "English"
 		};
 		this.addItem = this.addItem.bind(this);
 		this.deleteItem = this.deleteItem.bind(this);
 
+		this.changeRenderedLang = this.changeRenderedLang.bind(this);
 
+	}
+
+	changeRenderedLang(newLang){
+		this.setState({lang: newLang});
 	}
 
 	addItem(e){
@@ -53,14 +63,21 @@ class TodoList extends React.Component {
 
 	render() {
 		return (
+			
 			<div className="todoListMain">
+				<LanguagePropsControl onChange={this.changeRenderedLang}/>
+				<MainAppDescription lang={this.state.lang} />
+
 				<div className = "header">
 					<form onSubmit={this.addItem}>
 						<input ref={(a)=>this._inputElement = a}
 
-						placeholder="enter task">
+						
+						placeholder="">
 						</input>
-							<button type="submit">Add</button>
+						
+						<RenderSubmitButton lang={this.state.lang} />
+						
 					</form>
 				</div>
 				<TodoItems entries = {this.state.items} 

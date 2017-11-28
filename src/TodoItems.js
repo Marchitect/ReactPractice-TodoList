@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import FlipMove from 'react-flip-move';
 import Tappable from 'react-tappable';
 
@@ -11,7 +11,7 @@ class TodoItems extends React.Component {
 	}
 
 	createTasks(item){
-		return <Tappable onTap={(e)=>this.deleteTasks(item.key, e)} key={item.key} ><li > {item.text} </li></Tappable>
+		return <Tappable onTap={(e)=>this.deleteTasks(item.key, e)} key={item.key} ><li onDoubleClick={(e)=>this.deleteTasks(item.key, e)}> {item.text} </li></Tappable>
 	}
 
 	deleteTasks(key){

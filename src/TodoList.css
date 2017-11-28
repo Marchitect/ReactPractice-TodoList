@@ -4,10 +4,17 @@
 	/*makes all children taking a full row*/
 	flex-direction: column;
 }
+#languages{
+	background: #000;
+	color: #fff;
+	border: 2px solid #000;
+	border-radius: 0;
+	/*-webkit-appearance: none;*/
+	padding: 7px;
+	font-size: 18px;
+}
 .header{
 	margin: 0px auto;
-/*	float: left;
-	clear: both;*/
 }
 .todoListMain input{
 	padding: 3px;
@@ -31,6 +38,9 @@
 	color: #000;
 	background: #98FB98;
 	cursor: pointer;
+}
+.buttonContainer{
+	display: inline-block;
 }
 .todoListMain .theList{
 	list-style: none;
