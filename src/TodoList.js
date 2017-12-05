@@ -26,10 +26,10 @@ class TodoList extends React.Component {
 		this.setState({lang: newLang});
 	}
 
+
+
 	addItem(e){
 		var itemArray = this.state.items;
-
-		var file = './data.json';
 
 		if(this._inputElement.value !== ""){
 			itemArray.unshift(
@@ -45,9 +45,10 @@ class TodoList extends React.Component {
 			this._inputElement.value = "";
 		}
 
-		console.log(itemArray);
+		//console.log(itemArray);
 
 		e.preventDefault();
+
 	}
 
 	deleteItem(key){

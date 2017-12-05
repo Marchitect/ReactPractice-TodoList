@@ -10,7 +10,6 @@ export class LanguagePropsControl extends React.Component{
 	handleChange (e){
 		const lang = e.target.value;
 		this.props.onChange(lang);
-		console.log('change Handled');
 	}
 
 	render(){
