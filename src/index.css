@@ -10,6 +10,22 @@ body {
 	/*optional*/
 	/*align-items: center;*/
 }
+
+::-webkit-scrollbar{
+	background: #96D9FF;
+}
+
+::-webkit-scrollbar-track{
+	background: #96D9FF;
+	border-left: 2px solid #000;
+	border-right: 2px solid #000;
+}
+
+::-webkit-scrollbar-thumb{
+	background: #98FB98;
+	border: 2px solid #000;
+}
+
 h1{
 	font-size: 28px;
 	color: #fff;
